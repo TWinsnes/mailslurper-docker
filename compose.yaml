@@ -1,0 +1,9 @@
+services:
+  mailslurper:
+    image: mailslurper:latest
+    ports:
+      - 1025:1025 # smtp endpoint
+      - 1026:1026 # http server
+      - 1027:1027 # admin api
+    volumes:
+      - ./config.json:/config.json:ro
